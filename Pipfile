@@ -18,4 +18,7 @@ allow_prereleases = true
 
 [scripts]
 main = "python ./top_entry.py"
+
+# if you want to call hoge_entry directly, call:
+# export PYTHONPATH="$PYTHONPATH:/hoge"
 hoge = "python ./hoge/hoge_entry.py"
