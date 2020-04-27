@@ -20,5 +20,7 @@ allow_prereleases = true
 [scripts]
 # export PYTHONPATH="$PYTHONPATH:/app" is required
 main = "python ./app/batch_entrypoint.py"
-lint = "flake8 ."
 test = "pytest ."
+
+# flake8 runs without PYTHONPATH
+lint = "flake8 ."
