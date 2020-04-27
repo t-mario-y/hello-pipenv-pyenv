@@ -8,8 +8,13 @@ pipenv install
 pipenv install --dev
 ```
 
-## lint
+## commands
 
 ```shell script
-flake8 .
+pipenv run lint
+
+# test and main requires $PYTHONPATH
+export PYTHONPATH="$PYTHONPATH:/app"
+pipenv run test
+pipenv run main
 ```
