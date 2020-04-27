@@ -4,11 +4,18 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pylint = "*"
-mypy = "*"
 black = "*"
+mypy = "*"
+flake8 = "*"
 
 [packages]
 
 [requires]
 python_version = "3.6.10"
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+main = "python ./top_entry.py"
+hoge = "python ./hoge/hoge_entry.py"
