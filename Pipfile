@@ -7,6 +7,7 @@ verify_ssl = true
 black = "*"
 mypy = "*"
 flake8 = "*"
+pytest = "*"
 
 [packages]
 
@@ -20,3 +21,4 @@ allow_prereleases = true
 # export PYTHONPATH="$PYTHONPATH:/app" is required
 main = "python ./app/batch_entrypoint.py"
 lint = "flake8 ."
+test = "pytest ."
