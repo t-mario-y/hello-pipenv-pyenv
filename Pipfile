@@ -7,6 +7,7 @@ verify_ssl = true
 black = "*"
 mypy = "*"
 flake8 = "*"
+pytest = "*"
 
 [packages]
 
@@ -17,8 +18,9 @@ python_version = "3.6.10"
 allow_prereleases = true
 
 [scripts]
-main = "python ./top_entry.py"
+# export PYTHONPATH="$PYTHONPATH:/app" is required
+main = "python ./app/batch_entrypoint.py"
+test = "pytest ."
 
-# if you want to call hoge_entry directly, call:
-# export PYTHONPATH="$PYTHONPATH:/hoge"
-hoge = "python ./hoge/hoge_entry.py"
+# flake8 runs without PYTHONPATH
+lint = "flake8 ."
