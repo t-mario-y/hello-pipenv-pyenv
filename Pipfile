@@ -24,3 +24,5 @@ test = "pytest ."
 
 # flake8 runs without PYTHONPATH
 lint = "flake8 ."
+
+mypy = "mypy ."
