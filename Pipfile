@@ -18,11 +18,8 @@ python_version = "3.6.10"
 allow_prereleases = true
 
 [scripts]
-# export PYTHONPATH="$PYTHONPATH:/app" is required
 main = "python ./app/batch_entrypoint.py"
 test = "pytest ."
-
-# flake8 runs without PYTHONPATH
-lint = "flake8 ."
-
-mypy = "mypy ."
+flake8 = "flake8 ."
+black = "black ."
+mypy = "mypy . --no-incremental"
